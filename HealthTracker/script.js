@@ -56,6 +56,35 @@ function addRecord(){
 }
 
 
+function populateAllRecords(){
+    let allRecords = document.getElementById("allRecordsTableBody");
+    
+    const data = [
+        [1,"Yash",22,"Cold",123,1111],
+        [2,"Yaswanth G",25,"Fever",789,1100],
+        [3,"Yash gajula",20,"Legs pain",456,1200]
+    ];
+
+    for(let i=0;i<data.length;i++){
+        const newRow = allRecords.insertRow();
+
+        const sno = newRow.insertCell();
+        const name = newRow.insertCell();
+        const age = newRow.insertCell();
+        const desc = newRow.insertCell();
+        const uid = newRow.insertCell();
+        const time = newRow.insertCell();
+
+        sno.textContent = data[i][0];
+        name.textContent = data[i][1];
+        age.textContent = data[i][2];
+        desc.textContent = data[i][3];
+        uid.textContent = data[i][4];
+        time.textContent = data[i][5];
+
+    }
+}
+
 // function getAllRecords() {
 //     alert("No Records");
 // }
