@@ -9,25 +9,23 @@
 <body>
     <h1>Block chain Viewer</h1>
     <table>
-        <tr>
-            <th>S.No</th>
-            <th>Patient Name</th>
-            <th>Patient Age</th>
-            <th>Description</th>
-            <th>Patient UID</th>
-            <th>Time</th>
-        </tr>
-        
-        <tr>
-            <td>1</td>
-            <td>navya</td>
-            <td>22</td>
-            <td>cold</td>
-            <td>1234</td>
-            <td>11:00</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Patient Name</th>
+                <th>Patient Age</th>
+                <th>Description</th>
+                <th>Patient UID</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody id="allRecordsTableBody">
+        </tbody>
     </table>
-
+    <br>
+    <button type="button" onclick="populateAllRecords()">Display Data</button>
+    <br>
+    <br>
     <div>
         <a href="index.html">
             <button type="button">Go Back</button>
