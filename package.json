@@ -1,4 +1,10 @@
 {
+  "name": "health-tracker-backend",
+  "version": "1.0.0",
+  "main": "backend/routes/routes.js",
+  "scripts": {
+    "start": "node backend/routes/routes.js"
+  },
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.4.1",
