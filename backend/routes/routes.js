@@ -1,3 +1,4 @@
+require('dotenv').config({path:'../.env'});
 const {HealthTrackerDB} = require('../db');
 const cors = require('cors');
 const crypto = require('crypto');
@@ -64,6 +65,7 @@ app.get('/ping',(req,res)=>{
     res.status(200).send("Pong");
 });
 
-app.listen(3000, () => {
-    console.log("Server is running on port 3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
